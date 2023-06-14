@@ -5,8 +5,6 @@ from flask import Flask, redirect, render_template, request, jsonify, Markup, fl
 
 import subprocess
 
-import time
-
 import os
 
 from flask_cors import CORS

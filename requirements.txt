@@ -18,3 +18,4 @@ sklearn==0.0.post5
 matplotlib==3.7.1
 pandas==2.0.2
 stemgraphic==0.9.1
+subprocess=0.0.8
