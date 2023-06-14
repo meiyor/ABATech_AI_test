@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    background: #F1F1F1;
+}
+
+*, html {
+    --primaryGradient: linear-gradient(93.12deg, #581B98 0.52%, #9C1DE7 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #581B98 -2.14%, #9C1DE7 99.69%);
+    --primaryBoxShadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 0, 0, 0.1);
+    --primary: #581B98;
+}
+
+
+.checkbox {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    width: 750px;
+    height: 500px;
+}
+
+.checkbox_features {
+    position: absolute;
+    top: 280px;
+    left: 100px;
+    width: 750px;
+    height: 500px;
+}
+
+.slide {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 750px;
+    height: 500px;
+}
+
+.erase
+{
+    position: absolute;
+    top: 700px;
+    left: 500px;
+}
+
+.flashes{
+ 
+    position: absolute;
+    top: 80px;
+    left: 450px;
+    width: 750px;
+    height: 500px;
+
+}
+
+.status {
+    position: absolute;
+    top: 60px;
+    left: 450px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.0);
+}
