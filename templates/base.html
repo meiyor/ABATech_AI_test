@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation Classifiers - ABATech data</title>
+</head>
+<body>
+<div id="Registercontainer">
+    <form action='/user_rec' method='POST' id='submitform'>
+                <input type='text', placeholder='user id'  name="user_input">
+                <button type="submit" class="btn btn-success">Run Evaluation</button>
+                <br><br>
+                <h2>Classifiers</h2>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="check" class="selectanswer"  value=1>logistic</label>
+                  <br><br>      
+                  <label><input type="checkbox" name="check" class="selectanswer"  value=2>SVM</label>
+                  <br><br>
+                  <label><input type="checkbox" name="check" class="selectanswer"  value=3>Neural Network</label>
+                </div>
+                <div class="slide">
+                <h3>Cross-validation Fold</h3>
+                <input type="text", placeholder='0'  name="fold">
+                </div>
+                <br><br>
+                <div class="checkbox_features">
+                  <label><input type="checkbox" name="check_features" class="selectanswer_feature"  value=1>No added features</label>
+                  <br><br>
+                  <label><input type="checkbox" name="check_features" class="selectanswer_feature"  value=2>Add features</label>
+                </div>
+     </form>
+    </div>
+    <div class="status">
+    <h3>Status:</h3>
+    </div>
+    <div class="flashes" id='div_flash' data-dismiss="modal">
+      {% for message in get_flashed_messages() %}
+         {{ message }}
+      {% endfor %}
+    </div>
+    <button class="erase" onclick='removeFlash()'>erase</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script>
+    function removeFlash() {
+       const element = document.getElementById('div_flash');
+       element.remove();
+     }
+    </script>
+</body>
+</html>
