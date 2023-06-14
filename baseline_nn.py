@@ -79,7 +79,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         predictions = model.predict(DATA_test)
         # calculate classification accuracy
         acc[i] = accuracy_score(labels[test_index].astype('int'), predictions)
-        print(acc[i],labels[test_index].astype('int'),predictions,'printprint')
+        print(acc[i]) #,labels[test_index].astype('int'),predictions,'printprint')
         if int(sys.argv[3])==1:
             RocCurveDisplay.from_estimator(model, DATA_test, labels[test_index].astype('int'))
             plt.draw()
