@@ -67,5 +67,11 @@ that deploys another SVD decomposition but without centering the data, thus pres
 
  <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/pipelineabatech.jpg" width="900" height="450">
 
-If the user does not want to go in detail into the notebooks for running the models evaluation, can run the following Python commands to execute the baselines incluing only the normalized 22 features. The commands include the value of Kfold evaluation (for our particular case **k=5**) 
+If the user does not want to go in detail into the notebooks for running the models evaluation, can run the following Python commands to execute the baselines incluing only the normalized 22 features. The commands include the value of Kfold evaluation (for our particular case **k=5**) and the selector to plot a ROC curve for each fold. You can run the following Python commands to run the model baselines for the **logistic** linear, linear **SVM**, and the two hidden-layer **Neural Network** classifiers.
 
+```python
+python baseline_logistic.py technical_test.csv <folding_parameter> <plotting_selector> 
+python baseline_svm.py technical_test.csv <folding_parameter> <plotting_selector>
+python baseline_nn.py technical_test.csv <folding_parameter> <plotting_selector>
+```
+Similarly, 
