@@ -107,7 +107,9 @@ After you run this command from you root folder you can open **http://0.0.0.0:80
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_first.jpg" width="900" height="450">
 
-The application will let you evaluate your model when filled all the fields, such as, the username, folding parameter, classifier, and feature-set. If any of these fields is empty the application wil 
+The application will let you evaluate your model when filled all the fields, such as, the username, folding parameter, classifier, and feature-set. If any of these fields is empty the application will rebound and won't let you/user evaluate your selected model. To continue and add your data to the **Flask** application you need to click the button **Run Evaluation**. After you click this button the application will confirm it contains your data and if you will continue with your selected model evaluation. The following screen show in the red rectangle the status update about the data confirmation after this status is updated you/user need to click the **Run Evaluation** button to run the model deploying in the background.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_second.jpg" width="900" height="450">
 
 
 
