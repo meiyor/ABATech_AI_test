@@ -26,5 +26,9 @@ After running this the user will be ready to run the EDA in property. As we desc
 python read_csv_EDA.py technical_test.csv 1 2 3 4...
 python read_csv_EDA.py technical_test.csv "feature-name1" "feature-name2" "feature-name3"...  
 ```
-In the following images we will show examples of **stem and leaf**, **histogram**, **boxplot**, and **scatter-plot** examples extracted for particular examples of certain features containe in the **technical_test.csv** file. Some of the boxplots show a statistical difference between the **satisfied** and **dissatisfied** distributions
+In the following images we will show examples of **stem and leaf**, **histogram**, **boxplot**, and **scatter-plot** examples extracted for particular examples of certain features contained in the **technical_test.csv** file. Some of the boxplots show a statistical difference between the **satisfied** and **dissatisfied** distributions. These differences show that the participants that score higher values in the features (around 4-5) are more **satisfied** in comparison with the **dissatisfied** participants. First we start showing some **stem and leaf** plots for the feature **Age**.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_1.png" width="600" height="400">
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="600" height="400">
 
