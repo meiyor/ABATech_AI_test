@@ -58,4 +58,8 @@ The data is showing a general tendency consisting in the participants who feel m
 
  <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/scatter_plot_age_delay_time.png" width="800" height="450">
 
- The effect observed after pairing the features between them force us to look for more features or features extracted statistically 
+The effect observed after pairing the features between them, force us to look for more features or features extracted statistically to obtain a potential good    performance in the **satisfied** and **dissatisfied** distributions decoding. We will discuss in the following section that consists in the evaluation of three classifiers/models suchas **logistic** linear, linear **SVM**, and a two hidden-layer **Neural Network**, each of this model was evaluated following the original features and features generated from the original on statistical maps provided by [scikit-learn](https://scikit-learn.org) package in Python.
+
+# Models Evaluation
+
+
