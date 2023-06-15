@@ -89,17 +89,12 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the feature selection
         #rfe = RFE(estimator=LogisticRegression(solver='liblinear'), n_features_to_select=15)
         # define the model
-        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='adaptive',random_state=1)
+        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10,5),learning_rate='adaptive',random_state=1)
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))
         steps.append(('m', model))
         pipeline = Pipeline(steps=steps)
-        #D=DATA[train_index,:].astype(float)
-        #t = MinMaxScaler()
-        #t.fit(DATA[train_index,:].astype(float))
-        #DATA[train_index,:] = t.transform(DATA[train_index,:].astype(float))
-        #DATA[test_index,:] = t.transform(DATA[test_index,:].astype(float))
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]

@@ -90,13 +90,12 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the feature selection
         #rfe = RFE(estimator=LogisticRegression(solver='liblinear'), n_features_to_select=15)
         # define the model
-        model = SVC(random_state=0,tol=1e-5,C=1e-2,gamma='auto')
+        model = LinearSVC(random_state=0,tol=1e-5,C=2,max_iter=20000,dual=False)
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))
         steps.append(('m', model))
         pipeline = Pipeline(steps=steps)
-        #DATA[test_index,:] = t.transform(DATA[test_index,:].astype(float))
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]

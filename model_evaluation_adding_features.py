@@ -94,11 +94,6 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         #steps.append(('rfe', rfe))
         steps.append(('m', model))
         pipeline = Pipeline(steps=steps)
-        #D=DATA[train_index,:].astype(float)
-        #t = MinMaxScaler()
-        #t.fit(DATA[train_index,:].astype(float))
-        #DATA[train_index,:] = t.transform(DATA[train_index,:].astype(float))
-        #DATA[test_index,:] = t.transform(DATA[test_index,:].astype(float))
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
