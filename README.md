@@ -38,7 +38,7 @@ This plot shows the  **stem and leaf** plot for the feature **Age** for the dist
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_age.png" width="800" height="450">
 
-On the other hand, the 1-5 feature answer denoted as **medic service** show a more plausible difference in the histograms with higher frequencies in higher values in the **satisfied** distribution in comparison with the **dissatisfied** one. Here we show this particular histogram.
+On the other hand, the 0-5 feature answer denoted as **medic service** show a more plausible difference in the histograms with higher frequencies asssociated with higher values in the **satisfied** distribution in comparison with the **dissatisfied** one. Here we show this particular histogram and the effect is more evident in comparison with the feature **Age**.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_medic_service.png" width="800" height="450">
 
@@ -52,4 +52,10 @@ The same effect can be observable when the code is executed in a **multivariate 
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/grouped_barplot.png" width="800" height="450">
 
-The data is showing a general tendency consisting in the participants who feel more approval with different services of the company are more correlated with the **satisfied** trials, and the participants that dissapproves more the services are more related to the **dissatisfied** trials. This seems a logical behavior in this particular type of data.  
+The data is showing a general tendency consisting in the participants who feel more approval with different services of the company are more correlated with the **satisfied** trials, and the participants that dissapproves more the services are more related to the **dissatisfied** trials. This seems a logical behavior in this particular type of data.  The main issue with this dataset appears more when scatter-plots do not show a tendency or a pattern of differentiation between **satisfied** and **dissatisfied** distributions. This occurs because there are multiple participants that gives overlapped answers in the categorical features. The continuous features are more sparse and as well as the categorical they are very overlapped. We can see this effect in the following scatter-plots one between **post entry** and **Visitor service**, and the second between **Age** and **Delay in care (min)**.
+
+ <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/scatter_plot_post_entry_visitor_service.png" width="800" height="450">
+
+ <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/scatter_plot_age_delay_time.png" width="800" height="450">
+
+ The effect observed after pairing the features between them force us to look for more features or features extracted statistically 
