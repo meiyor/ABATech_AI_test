@@ -34,4 +34,16 @@ This plot shows the  **stem and leaf** plot for the feature **Age** for the dist
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="800" height="450">
 
-This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular features. An histogram plot showing this distributions at the same time comfirm that the difference between the means of this feature is not very different.
+This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular features. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this continuous variable the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_age.png" width="800" height="450">
+
+On the other hand, the 1-5 feature answer denoted as **medic service** show a more plausible difference in the histograms with higher frequencies in higher values in the **satisfied** distribution in comparison with the **dissatisfied** one. Here we show this particular histogram.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_medic_service.png" width="800" height="450">
+
+This effect happens in other categorical variables as we can see that in the boxplots of other features such as **post entry** and **check-in service**. Again here the **satisfied** distribution shows higher values in comparison with **dissatisfied**, thus implying a significant statistical difference in this marginal data. In the following plots we show the **post entry** and **check-in service** boxplots.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/boxplot_post_entry.png" width="800" height="450">
+
+<img src="https://github.com/meiy" width="800" height="450">
