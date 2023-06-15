@@ -30,11 +30,11 @@ In the following images we will show examples of **stem and leaf**, **histogram*
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_1.png" width="800" height="450">
 
-This plot shows the  **stem and leaf** plot for the **Age** feature for the distribution **satisfied**. This plot shows an approximate normal distribution for this particular features
+This plot/figure shows the  **stem and leaf** plot for the **Age** feature for the distribution **satisfied**. This plot shows an approximate normal distribution for this particular features
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="800" height="450">
 
-This plot shows the  **stem and leaf** plot for the **Age**feature for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular feature. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this type of continuous variable/feature, the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
+This plot/figure shows the  **stem and leaf** plot for the **Age**feature for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular feature. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this type of continuous variable/feature, the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_age.png" width="800" height="450">
 
@@ -42,7 +42,7 @@ On the other hand, the 0-5 feature answer denoted as **medic service** show a mo
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_medic_service.png" width="800" height="450">
 
-This effect happens in other categorical variables as we can see that in the boxplots of other features such as **post entry** and **check-in service**. Again here the **satisfied** distribution shows higher values in comparison with the **dissatisfied** one , thus implying a significant statistical difference in this marginal data. In the following plots we show the **post entry** and **check-in service** boxplots.
+This effect happens in other categorical variables, as we can see that in the boxplots of other features such as **post entry** and **check-in service**. Again here the **satisfied** distribution shows higher values in comparison with the **dissatisfied** one , thus implying a significant statistical difference in this marginal data. In the following plots we show the **post entry** and **check-in service** boxplots.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/boxplot_post_entry.png" width="800" height="450">
 
