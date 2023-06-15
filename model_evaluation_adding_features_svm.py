@@ -96,7 +96,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         #steps.append(('rfe', rfe))
         steps.append(('m', model))
         pipeline = Pipeline(steps=steps)
-        # define the model
+        # train the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
         pipeline.fit(DATA_train,labels[train_index].astype('int'))
