@@ -74,4 +74,11 @@ python baseline_logistic.py technical_test.csv <folding_parameter> <plotting_sel
 python baseline_svm.py technical_test.csv <folding_parameter> <plotting_selector>
 python baseline_nn.py technical_test.csv <folding_parameter> <plotting_selector>
 ```
-Similarly, 
+Similarly, for the 124 features we have three different .py files associated with the execution/evaluation of the three classifiers we included in this project **logistic** linear, linear **SVM**, and the two hidden-layer **Neural Network** classifiers. The Python commands have the same input parameters, the value of the Kfold evaluation and plotting selector for allowing the ROC curves per fold. You can run the following Python commands to run the adding-features model for the **logistic** linear, linear **SVM**, and the two hidden-layer **Neural Network** classifiers.
+
+```python
+python model_evaluation_adding_features.py technical_test.csv <folding_parameter> <plotting_selector> 
+python model_evaluation_adding_features_svm.py technical_test.csv <folding_parameter> <plotting_selector>
+python model_evaluation_adding_features_nn.py technical_test.csv <folding_parameter> <plotting_selector>
+```
+In this evaluation we test a 5-fold crossvalidation for the baselines and the added-features models (124 features). In the following table we report the average and the standard deviation of the accuracy for each modality and each classifier.
