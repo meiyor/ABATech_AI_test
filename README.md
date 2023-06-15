@@ -85,7 +85,7 @@ You can follow the previous Python commands if you don't want to follow the deta
 
 |   feat/class    |Logistic |   SVM   |   2-layer NN     |     
 |----------------	|--------	|--------	|-----------------	|
-| 22 features     | 0.8727132737911919 ± 0.0026703320086670333  	| 0.8719356328919001 ± 0.002166752685626174  	| 0.9426316599938405 ± 0.0014365960981467367 |
-| 124 features    | 0.776  	| 0.9252001847859562  ± 0.0007756945518790318  	| 0.768  	        	|
+| 22 features     | 0.87271 ± 0.00267  	| 0.87193 ± 0.00216  	| 0.94263 ± 0.00143 |
+| 124 features    | 0.92167 ± 0.00187  	| 0.92521  ± 0.00077  	| **0.95702 ± 0.00132**	|
 
-The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **0.95**. Adding new features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance
+The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **0.95**. Adding new features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation.
