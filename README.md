@@ -83,8 +83,9 @@ python model_evaluation_adding_features_nn.py technical_test.csv <folding_parame
 ```
 You can follow the previous Python commands if you don't want to follow the details of the notebooks in the **notebooks** folder, but you can take any alternative for evaluating the models. In this evaluation we test a 5-fold crossvalidation (as we mentioned above) for the baselines and the added-features models (124 features). In the following table we report the average and the standard deviation of the accuracy for each modality and each classifier.
 
-|   feat/class    | FER    	|        	|        	|       	| CNN   	|       	|       	|       	|
-|----------------	|--------	|--------	|--------	|-------	|-------	|-------	|-------	|-------	|
-| 22 features     | 0.813  	| 0.808  	| 0.802  	| 0.807 	| 0.860 	| 0.864 	| 0.860 	| 0.862 	|
-| 124 features    | 0.776  	| 0.774  	| 0.768  	| 0.771 	| 0.934 	| 0.935 	| 0.933 	| 0.934 	|
+|   feat/class    |Logistic |   SVM   |   2-layer NN     |     
+|----------------	|--------	|--------	|-----------------	|
+| 22 features     | 0.8727132737911919 ± 0.0026703320086670333  	| 0.8719356328919001 ± 0.002166752685626174  	| 0.9426316599938405 ± 0.0014365960981467367 |
+| 124 features    | 0.776  	| 0.9252001847859562  ± 0.0007756945518790318  	| 0.768  	        	|
 
+The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **0.95**. Adding new features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance
