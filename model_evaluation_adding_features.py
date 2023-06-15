@@ -97,7 +97,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
-        DATA_train = pipeline.fit(DATA_train,labels[train_index].astype('int'))
+        pipeline.fit(DATA_train,labels[train_index].astype('int'))
         # make predictions on the test set
         predictions = pipeline.predict(DATA_test)
         # calculate classification accuracy

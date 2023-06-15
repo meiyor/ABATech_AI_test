@@ -3,7 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-from sklearn.decomposition import PCA
+from sklearn.decomposition import PCA, SparsePCA
 from sklearn.pipeline import Pipeline
 from sklearn.manifold import TSNE
 from sklearn.pipeline import FeatureUnion
@@ -82,6 +82,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         transforms.append(('qt', QuantileTransformer(n_quantiles=100, output_distribution='normal')))
         transforms.append(('kbd', KBinsDiscretizer(n_bins=10, encode='ordinal', strategy='uniform')))
         transforms.append(('pca', PCA(n_components=7)))
+        #transforms.append(('sparsepca', SparsePCA(n_components=7)))
         transforms.append(('svd', TruncatedSVD(n_components=7)))
 
         # create the feature union
@@ -89,7 +90,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the feature selection
         #rfe = RFE(estimator=LogisticRegression(solver='liblinear'), n_features_to_select=15)
         # define the model
-        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10,5),learning_rate='adaptive',random_state=1)
+        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='adaptive',random_state=1)
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))
@@ -99,7 +100,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
         #tsne_results =  tsne_pipeline.fit_transform(DATA_train)
-        DATA_train = pipeline.fit(DATA_train,labels[train_index].astype('int'))
+        pipeline.fit(DATA_train,labels[train_index].astype('int'))
         predictions = pipeline.predict(DATA_test)
         # calculate classification accuracy
         acc[i] = accuracy_score(labels[test_index].astype('int'), predictions)
