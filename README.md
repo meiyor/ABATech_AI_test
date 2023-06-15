@@ -48,4 +48,8 @@ This effect happens in other categorical variables as we can see that in the box
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/boxplot_check_in_service.png" width="800" height="450">
 
-The same effect can be observable when the code is executed in a **multivariate analysis** where multiple features show a similar behavior with higher ratings in the **satisfied** in comparison with the **dissatisfied**. This effect must be taken into account by the classifiers and the feature generator algorithms that we use in this repository - to obtain better identification (classification) performance between 
+The same effect can be observable when the code is executed in a **multivariate analysis** where multiple features show a similar behavior with higher ratings in the **satisfied** in comparison with the **dissatisfied**. This effect must be taken into account by the classifiers and the feature generator algorithms that we use in this repository - to obtain better **satisfied** and **dissatisfied** identification trials (classification). To check the higher values associated with **satisfied** we can plot a grouped bar-plot between the features **post entry**, **Visitor service**, **check-in service**, and **Medic service**. We present these barplots as follows.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/grouped_barplot.png" width="800" height="450">
+
+The data is showing a general tendency consisting in the participants who feel more approval with different services of the company are more correlated with the **satisfied** trials, and the participants that dissapproves more the services are more related to the **dissatisfied** trials. This seems a logical behavior in this particular type of data.  
