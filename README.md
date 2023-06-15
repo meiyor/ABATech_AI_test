@@ -115,4 +115,4 @@ After you clicked the **Run Evaluation** button for the second time and the mode
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_third.jpg" width="900" height="450">
 
-I feel very motivated doing this project for ABATech, I hope it will be a starting point to implement more complete and ambicious project in the future, and more important, I hope to work/collaborate with you in the near future.
+I feel very motivated doing this project for ABATech, I hope it will be a starting point to implement more complete and ambicious projects in the future, and more important I hope to work/collaborate with you in the near future.
