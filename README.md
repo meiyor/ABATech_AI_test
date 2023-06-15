@@ -26,19 +26,19 @@ After running this the user will be ready to run the EDA in property. As we desc
 python read_csv_EDA.py technical_test.csv 1 2 3 4...
 python read_csv_EDA.py technical_test.csv "feature-name1" "feature-name2" "feature-name3"...  
 ```
-In the following images we will show examples of **stem and leaf**, **histogram**, **boxplot**, and **scatter-plot** examples extracted for particular examples of certain features contained in the **technical_test.csv** file. Some of the boxplots show a statistical difference between the **satisfied** and **dissatisfied** distributions. These differences show that the participants that score higher values in the features (around 4-5) are more **satisfied** in comparison with the **dissatisfied** participants. First we start showing some **stem and leaf** plots for the feature **Age**.
+In the following images we will show examples of **stem and leaf**, **histogram**, **boxplot**, and **scatter-plot** examples extracted for particular examples of certain features contained in the **technical_test.csv** file. Some of the boxplots show a statistical difference between the **satisfied** and **dissatisfied** distributions. These differences show that the participants that score higher values in the features (around 4-5) are more **satisfied** in comparison with the **dissatisfied** participants. First we start showing some **stem and leaf** plots for the **Age** feature.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_1.png" width="800" height="450">
 
-This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **satisfied**. This plot shows an approximate normal distribution for this particular features
+This plot shows the  **stem and leaf** plot for the **Age** feature for the distribution **satisfied**. This plot shows an approximate normal distribution for this particular features
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="800" height="450">
 
-This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular features. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this continuous variable the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
+This plot shows the  **stem and leaf** plot for the **Age**feature for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular feature. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this type of continuous variable/feature, the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_age.png" width="800" height="450">
 
-On the other hand, the 0-5 feature answer denoted as **medic service** show a more plausible difference in the histograms with higher frequencies asssociated with higher values in the **satisfied** distribution in comparison with the **dissatisfied** one. Here we show this particular histogram and the effect is more evident in comparison with the feature **Age**.
+On the other hand, the 0-5 feature answer denoted as **medic service** show a more plausible difference in the histograms with higher frequencies asssociated with higher values in the **satisfied** distribution in comparison with the **dissatisfied** one. Here we show this particular histogram and the effect is more evident in comparison with the **Age** feature.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_medic_service.png" width="800" height="450">
 
@@ -48,11 +48,11 @@ This effect happens in other categorical variables as we can see that in the box
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/boxplot_check_in_service.png" width="800" height="450">
 
-The same effect can be observable when the code is executed in a **multivariate analysis** where multiple features show a similar behavior with higher ratings in the **satisfied** in comparison with the **dissatisfied**. This effect must be taken into account by the classifiers and the feature generator algorithms that we use in this repository - to obtain better **satisfied** and **dissatisfied** identification trials (classification). To check the higher values associated with **satisfied** we can plot a grouped bar-plot between the features **post entry**, **Visitor service**, **check-in service**, and **Medic service**. We present these barplots as follows.
+The same effect can be observable when the code is executed in a **multivariate analysis** where multiple features show a similar behavior with higher ratings in the **satisfied** in comparison with the **dissatisfied**. This effect must be taken into account by the classifiers and the feature generator algorithms that we use in this repository - to obtain better **satisfied** and **dissatisfied** identification (classification) trials. To check the higher values associated with **satisfied** we can plot a grouped bar-plot between the features **post entry**, **Visitor service**, **check-in service**, and **Medic service**. We present these barplots as follows.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/grouped_barplot.png" width="800" height="450">
 
-The data is showing a general tendency consisting in the participants who feel more approval with different company services are more correlated with the **satisfied** trials, and the participants that dissapproves more the services are more related to the **dissatisfied** trials. This seems a logical behavior in this particular type of data, and the effect is confirmed in multiple features.  The main issue with this dataset appears more when scatter-plots do not show a tendency or a pattern of differentiation between **satisfied** and **dissatisfied** distributions. This occurs because there are multiple participants that gives overlapped answers in the categorical features. The continuous features are more sparse, and as well as the categorical, they are very overlapped. We can see this effect in the following scatter-plots, the first between **post entry** and **Visitor service**, and the second between **Age** and **Delay in care (min)**.
+The data is showing a general tendency consisting in the participants who feel more approval with certain company services are more correlated with the **satisfied** trials, and the participants that dissapproves those services are more related to the **dissatisfied** trials. This seems a logical behavior in this particular type of data, and the effect is confirmed in multiple features.  The main issue with this dataset appears more when scatter-plots do not show a tendency or a pattern of differentiation between **satisfied** and **dissatisfied** distributions. This occurs because there are multiple participants that gives overlapped answers in the categorical features. The continuous features are more sparse, and as well as the categorical, they are very overlapped. We can see this effect in the following scatter-plots, the first between **post entry** and **Visitor service**, and the second between **Age** and **Delay in care (min)**.
 
  <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/scatter_plot_post_entry_visitor_service.png" width="800" height="450">
 
@@ -115,4 +115,4 @@ After you clicked the **Run Evaluation** button for the second time and the mode
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_third.jpg" width="900" height="450">
 
-
+I feel very motivated doing this project for ABATech, I hope it will be a starting point to implement more complete and ambicious project in the future, and more important I hope to work/collaborate with you in the near future.
