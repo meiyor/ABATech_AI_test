@@ -81,4 +81,4 @@ python model_evaluation_adding_features.py technical_test.csv <folding_parameter
 python model_evaluation_adding_features_svm.py technical_test.csv <folding_parameter> <plotting_selector>
 python model_evaluation_adding_features_nn.py technical_test.csv <folding_parameter> <plotting_selector>
 ```
-In this evaluation we test a 5-fold crossvalidation for the baselines and the added-features models (124 features). In the following table we report the average and the standard deviation of the accuracy for each modality and each classifier.
+You can follow the previous Python commands if you don't want to follow the details of the notebooks in the **notebooks** folder, but you can take any alternative for evaluating the models. In this evaluation we test a 5-fold crossvalidation (as we mentioned above) for the baselines and the added-features models (124 features). In the following table we report the average and the standard deviation of the accuracy for each modality and each classifier.
