@@ -40,7 +40,7 @@ def setBoxColors_grouped(bp,size_features):
      plt.setp(bp['whiskers'][i+ccount+1], color=colors[i])
      if i<size_features-2:
        plt.setp(bp['fliers'][i+ccount], color=colors[i])
-       plt.setp(bp['fliers'][i+ccount+1], color=colors[i])
+       #plt.setp(bp['fliers'][i+ccount+1], color=colors[i])
      plt.setp(bp['medians'][i], color=colors[i])
      ccount=ccount+1
 
