@@ -28,7 +28,10 @@ python read_csv_EDA.py technical_test.csv "feature-name1" "feature-name2" "featu
 ```
 In the following images we will show examples of **stem and leaf**, **histogram**, **boxplot**, and **scatter-plot** examples extracted for particular examples of certain features contained in the **technical_test.csv** file. Some of the boxplots show a statistical difference between the **satisfied** and **dissatisfied** distributions. These differences show that the participants that score higher values in the features (around 4-5) are more **satisfied** in comparison with the **dissatisfied** participants. First we start showing some **stem and leaf** plots for the feature **Age**.
 
-<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_1.png" width="600" height="400">
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_1.png" width="800" height="450">
 
-<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="600" height="400">
+This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **satisfied**. This plot shows an approximate normal distribution for this particular features
 
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="800" height="450">
+
+This plot shows the  **stem and leaf** plot for the feature **Age** for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular features. An histogram plot showing this distributions at the same time comfirm that the difference between the means of this feature is not very different.
