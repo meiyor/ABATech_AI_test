@@ -34,7 +34,7 @@ This plot/figure shows the  **stem and leaf** plot for the **Age** feature for t
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/steam_leaf_2.png" width="800" height="450">
 
-This plot/figure shows the  **stem and leaf** plot for the **Age**feature for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular feature. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this type of continuous variable/feature, the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
+This plot/figure shows the  **stem and leaf** plot for the **Age** feature for the distribution **dissatisfied**. This plot shows an approximate normal distribution for this particular feature. A histogram plot showing these distributions in the same axis comfirm that the difference between the means of this feature is not very different. For this type of continuous variable/feature, the tendency is not showing an evident difference between the **satisfied** and **dissatisfied** distributions.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/histogram_age.png" width="800" height="450">
 
