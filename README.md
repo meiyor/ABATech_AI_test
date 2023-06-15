@@ -88,7 +88,9 @@ You can follow the previous Python commands if you don't want to follow the deta
 | 22 features     | 0.87271 ± 0.00267  	| 0.87193 ± 0.00216  	| 0.94263 ± 0.00143 |
 | 124 features    | 0.92167 ± 0.00187  	| 0.92521  ± 0.00077  	| **0.95702 ± 0.00132**	|
 
-The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **0.95**. Adding new features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation.
+The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **ACC>=0.95**. Adding new statistical features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation. In the following Figure, we show the average ROC curve (across the 5 folds) for the two-layer **Neural Network** feeding the classifier with extended 124 features. The **AUC=0.99** for this combination of feature set and classifier.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/ROC_curve_best_model.png" width="900" height="450">
 
 Now to automatize the app a little bit more, we implemented a simple web-app in **Flask**, **javascript**, and **html**. From this web-app it is possible to execute the models specifying any feature-set, any folding parameter, and any classifier. You just need to run it locally in the address **http://0.0.0.0:8080** or check the automatic address **Flask** is giving to you when you are running the app up. For this app always access the port **8080** you can mount this app in the web using [**ngrok**](https://ngrok.com/).
 Please open a new account and install the last **ngrok** version. You can run a **ngrok** server for this app using the following command.
@@ -101,7 +103,11 @@ Having or not having **ngrok** installed you can run the app locally from **Flas
 ```python
 python app.py
 ```
-After you run this command from you root folder you can open **http://0.0.0.0:8080** or **http://10.50.120.157:8080/** in your more suitable web-browser. We suggest Firefox or Google Chrome to run this web-app. The following screen will appear in your browser when you load this local address. There you will be able to see a section for login marked with a blue squared, a section for setting the parameters 1) the classifiers with a mutually exclusive checkbox, 2) the folding parameter form input as a text slide, and 3) a checkbox to select the original 22 features or extend them to 124.
+After you run this command from you root folder you can open **http://0.0.0.0:8080** or **http://10.50.120.157:8080/** in your more suitable web-browser. We suggest Firefox or Google Chrome to run this web-app. The following screen will appear in your browser when you load this local address. There you will be able to see a section for login marked with a blue rectangle, a section for setting the parameters marked with a red rectangle 1) the classifiers with a mutually exclusive checkbox, 2) the folding parameter form input as a text slide, and 3) a checkbox to select the original 22 features or extend them to 124. A status section is marked with a green rectangle, in this section we will report the result for the corresponding model evaluation.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_first.jpg" width="900" height="450">
+
+The application will let you evaluate your model when filled all the fields, such as, the username, folding parameter, classifier, and feature-set. If any of these fields is empty the application wil 
 
 
 
