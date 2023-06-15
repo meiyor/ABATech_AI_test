@@ -107,10 +107,12 @@ After you run this command from you root folder you can open **http://0.0.0.0:80
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_first.jpg" width="900" height="450">
 
-The application will let you evaluate your model when filled all the fields, such as, the username, folding parameter, classifier, and feature-set. If any of these fields is empty the application will rebound and won't let you/user evaluate your selected model. To continue and add your data to the **Flask** application you need to click the button **Run Evaluation**. After you click this button the application will confirm it contains your data and if you will continue with your selected model evaluation. The following screen show in the red rectangle the status update about the data confirmation after this status is updated you/user need to click the **Run Evaluation** button to run the model deploying in the background.
+The application will let you evaluate your model when filled all the fields, such as, the username, folding parameter, classifier, and feature-set. If any of these fields is empty the application will rebound and won't let you/user evaluate your selected model letting you know you/user need to fill all the fields. To continue adding your data to the **Flask** application you need to click the button **Run Evaluation**. After you clicked this button the application will confirm it received your data and if you will continue with your selected model evaluation. The following screen show the status update in a red rectangle. This status section shows the data reception confirmation. After this status is updated, you/user need to click the **Run Evaluation** button to run the model deploying in the background - clicking the button a second time.
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_second.jpg" width="900" height="450">
 
+After you clicked the **Run Evaluation** button for the second time and the model is deployed, the **Flask**-based web-app will wait until the Kfold validation finishes. Depending on the model and the feature-set you/user have selected, the Kfold evaluation will take less or more time to finish. The status section will be updated when the model process finishes in the background. The status section will receive the results from Python stoud/stdin. Accuracies for each fold will be reported in the status section as well as the average and the standard deviation of the accuracies across the folds. The following screen show the moment when the application received the models evaluation. Accuracy results appear in the red rectangle. 
 
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/screen_app_third.jpg" width="900" height="450">
 
 
