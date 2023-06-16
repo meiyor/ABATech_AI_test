@@ -75,7 +75,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
-        model = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(5,5), learning_rate='adaptive', random_state=1)
+        model = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(10,5), learning_rate='adaptive', random_state=1234)
         # fit the model on the training set
         model.fit(DATA_train, labels[train_index].astype('int'))
         # make predictions on the test set
