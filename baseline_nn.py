@@ -68,7 +68,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         #print(f"  Train: index={train_index}")
         #print(f"  Test:  index={test_index}")
         #D=DATA[train_index,:].astype(float)
-        t = RobustScaler()
+        t = MinMaxScaler()
         t.fit(DATA[train_index,:].astype(float))
         DATA[train_index,:] = t.transform(DATA[train_index,:].astype(float))
         DATA[test_index,:] = t.transform(DATA[test_index,:].astype(float))
