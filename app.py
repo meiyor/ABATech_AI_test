@@ -3,6 +3,10 @@ from flask import Flask, redirect, render_template, request, jsonify, Markup, fl
 ## keep this  commented and run ngrok from a separate terminal it generates multiple errors running it inside the code
 #from flask_ngrok import  run_with_ngrok only if you want to use it! For now this is working locally
 
+import sys
+
+sys.stdout.flush()
+
 import subprocess
 
 import os
@@ -40,6 +44,7 @@ def user_rec():
     global classifiers
     global features
     if indicator==0:
+       sys.stdout.flush()
        user_name = request.form['user_input']
        folding = request.form['fold']
        classifiers = request.form.getlist('check')
@@ -69,22 +74,22 @@ def user_rec():
        if indicator==1:
           ## wait to finish the subprocess
           if classifiers[0]=='1' and features[0]=='1':
-             p = subprocess.Popen(f"python baseline_logistic.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u baseline_logistic.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           if classifiers[0]=='1' and features[0]=='2':
-             p = subprocess.Popen(f"python model_evaluation_adding_features.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u model_evaluation_adding_features.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           if classifiers[0]=='2' and features[0]=='1':
-             p = subprocess.Popen(f"python baseline_svm.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u baseline_svm.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           if classifiers[0]=='2' and features[0]=='2':
-             p = subprocess.Popen(f"python model_evaluation_adding_features_svm.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u model_evaluation_adding_features_svm.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           if classifiers[0]=='3' and features[0]=='1':
-             p = subprocess.Popen(f"python baseline_nn.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u baseline_nn.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           if classifiers[0]=='3' and features[0]=='2':
-             p = subprocess.Popen(f"python model_evaluation_adding_features_nn.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
+             p = subprocess.Popen(f"python -u model_evaluation_adding_features_nn.py technical_test.csv {folding} 0", stdout=subprocess.PIPE, shell=True)
           (output, err) = p.communicate() 
           output=str(output.decode('utf-8'))
           output=output.replace(':','<br></br>')
           print(output,'output')
-          #p_status = p.wait()
+          p_status = p.wait()
           flash(Markup('<br></br>Results are:<br></br>'+output))
           indicator=0
           user_name = None

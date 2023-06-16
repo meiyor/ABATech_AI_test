@@ -19,6 +19,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 import pandas as pd
+from signal import signal, SIGPIPE, SIG_DFL
+signal(SIGPIPE,SIG_DFL)
+
 
 data=[]
 ## read csv file
