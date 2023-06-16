@@ -72,7 +72,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
-        ## grid search
+        ## grid search don't implemented if thhis is not necessary
         #C_range = np.logspace(-2, 10, 13)
         #gamma_range = np.logspace(-9, 3, 13)
         #param_grid = dict(gamma=gamma_range, C=C_range)
@@ -80,8 +80,6 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         #grid = GridSearchCV(SVC(), param_grid=param_grid, cv=cv)
         #grid.fit(DATA_train,labels[train_index].astype('int'))
         model = make_pipeline(MinMaxScaler(),LinearSVC(random_state=0, tol=1e-5))
-        #model = SVC(C=grid.best_params_['C'], gamma=grid.best_params_['gamma'])
-        #model = SVC(C=1.0, gamma=0.099999999999)
         # fit the model on the training set
         model.fit(DATA_train, labels[train_index].astype('int'))
         # make predictions on the test set

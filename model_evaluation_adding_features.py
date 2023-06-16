@@ -92,6 +92,9 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))
+        ## do not normalize for this linear classifier
+        #scaler=MinMaxScaler()
+        #steps.append(('sc',scaler))
         steps.append(('m', model))
         pipeline = Pipeline(steps=steps)
         # train the model
