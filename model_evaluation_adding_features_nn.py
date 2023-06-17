@@ -92,7 +92,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the feature selection
         #rfe = RFE(estimator=LogisticRegression(solver='liblinear'), n_features_to_select=15)
         # define the model
-        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='adaptive',random_state=1234)
+        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='adaptive',random_state=1234,max_iter=1000)
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))
