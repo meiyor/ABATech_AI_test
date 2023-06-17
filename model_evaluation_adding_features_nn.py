@@ -22,6 +22,7 @@ import sys
 import pandas as pd
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE,SIG_DFL)
+np.random.seed(1234)
 
 data=[]
 ## read csv file
