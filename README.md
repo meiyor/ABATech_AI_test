@@ -86,7 +86,7 @@ You can follow the previous Python commands if you don't want to follow the deta
 |   feat/class    |Logistic |   SVM   |   2-layer NN     |     
 |----------------	|--------	|--------	|-----------------	|
 | 22 features     | 0.87271 ± 0.00267  	| 0.87193 ± 0.00216  	| 0.94372 ± 0.00143 |
-| 124 features    | 0.92167 ± 0.00187  	| 0.92521  ± 0.00097  	| **0.96036 ± 0.00107**	|
+| 124 features    | 0.92167 ± 0.00187  	| 0.92521  ± 0.00097  	| **0.96051 ± 0.00107**	|
 
 The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **ACC>=0.95**. Adding new statistical features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation. In the following Figure, we show the average ROC curve (across the 5 folds) for the two-layer **Neural Network** feeding the classifier with extended 124 features. The **AUC=0.99** for this combination of feature set and classifier.
 
