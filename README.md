@@ -90,8 +90,8 @@ You can follow the previous Python commands if you don't want to follow the deta
 
 The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **ACC>=0.95**. Adding new statistical features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation. In the following Figure, we show the average ROC curve (across the 5 folds) for the two-layer **Neural Network** feeding the classifier with extended 124 features. The **AUC=0.99** for this combination of feature set and classifier. Other metrics for the best classifier performance, in this case the two-layer **Neural Network**, are for instance:
 
-- **precision =** 0.98288 ± 0.00175
-- **recall =** 0.94945 ± 0.00315
+- **Precision =** 0.98288 ± 0.00175
+- **Recall =** 0.94945 ± 0.00315
 - **F1=** 0.96587 ± 0.001067
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/ROC_curve_best_model.png" width="900" height="450">
