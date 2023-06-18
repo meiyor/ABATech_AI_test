@@ -35,7 +35,7 @@ from tensorflow import keras
 import gc
 
 n_inputs=124
-weight_decay = 0.0001
+weight_decay = 1e-5
 
 data=[]
 ## read csv file
@@ -90,7 +90,7 @@ KFold(n_splits=int(sys.argv[2]), random_state=None, shuffle=False)
 for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         tf.random.set_seed(1234)
         np.random.seed(1234)
-        random.seed(1234)
+        #random.seed(1234)
         print(f":Fold {i}:")
         #print(f"  Train: index={train_index}")
         #print(f"  Test:  index={test_index}")
@@ -106,11 +106,11 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         ## decoder definition
         visible = Input(shape=(n_inputs,))
         ## decoder level 1
-        e = Dense(100,kernel_initializer=tf.keras.initializers.GlorotNormal())(visible)
+        e = Dense(100,kernel_initializer=tf.keras.initializers.GlorotNormal(),kernel_regularizer=regularizers.L2(l2=weight_decay))(visible)
         #e = BatchNormalization()(e)
         e = ReLU()(e)
         #e = Dropout(0.7)(e)
-        e = Dense(10,kernel_initializer=tf.keras.initializers.GlorotNormal())(e)
+        e = Dense(10,kernel_initializer=tf.keras.initializers.GlorotNormal(),kernel_regularizer=regularizers.L2(l2=weight_decay))(e)
         #e = BatchNormalization()(e)
         e = ReLU()(e)
         #e = Dropout(0.2)(e)
@@ -138,7 +138,7 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         DATA_train_encoder = pipeline.fit_transform(DATA_train,labels[train_index].astype('int'))
         DATA_test_encoder = pipeline.transform(DATA_test)
         ## train encoder
-        history = deep.fit(DATA_train_encoder.astype(float),tf.keras.utils.to_categorical(labels[train_index].astype('int'),num_classes=2), epochs=250, batch_size=200, verbose=2,  validation_data=(DATA_test_encoder.astype(float),tf.keras.utils.to_categorical(labels[test_index].astype('int'),num_classes=2)))
+        history = deep.fit(DATA_train_encoder.astype(float),tf.keras.utils.to_categorical(labels[train_index].astype('int'),num_classes=2), epochs=350, batch_size=200, verbose=2,  validation_data=(DATA_test_encoder.astype(float),tf.keras.utils.to_categorical(labels[test_index].astype('int'),num_classes=2)))
         ## plot if the user wants
         if int(sys.argv[3])==1:
             pyplot.plot(history.history['loss'], label='train')
