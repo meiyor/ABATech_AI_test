@@ -90,6 +90,12 @@ You can follow the previous Python commands if you don't want to follow the deta
 
 The best accuracy we found when we extend the features to 124 and train the two-layer **Neural Network**. The accuracy values across the folds are higher than **ACC>=0.95**. Adding new statistical features and analyzing the new features with an autoencoder can be possibilities of a future work - and maybe improve more the decoding performance. However, the performance achieved with the proposed system and the aggregated features is significant having 129880 samples, and trying to balance the difference between the samples and features is a good option for this model evaluation. In the following Figure, we show the average ROC curve (across the 5 folds) for the two-layer **Neural Network** feeding the classifier with extended 124 features. The **AUC=0.99** for this combination of feature set and classifier.
 
+We added an extra option to emulate our based classifier and metrics using [**Tensorflow**](https://www.tensorflow.org/) with [**keras**](https://keras.io/). They are installed following the requirements.txt list. To evaluate the implementation of the **Neural Network** classifier we modeled in [scikit-learn](https://scikit-learn.org) in [**Tensorflow**](https://www.tensorflow.org/) with [**keras**](https://keras.io/) you can run the following command in Python. In this case the plotting selector will make appear the learning curve showing the training and test lost for each fold.
+
+```python
+python model_evaluation_adding_features_deep.py technical_test.csv <folding_parameter> <plotting_selector> 
+```
+
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/ROC_curve_best_model.png" width="900" height="450">
 
 Now to automatize the app a little bit more, we implemented a simple web-app in **Flask**, **javascript**, and **html**. From this web-app it is possible to execute the models specifying any feature-set, any folding parameter, and any classifier. You just need to run it locally in the address **http://0.0.0.0:8080** or check the automatic address **Flask** is giving to you when you are running the app up. For this app always access the port **8080** you can mount this app in the web using [**ngrok**](https://ngrok.com/).
