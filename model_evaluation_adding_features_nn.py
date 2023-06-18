@@ -17,12 +17,12 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.metrics import RocCurveDisplay
 from matplotlib import pyplot
 import matplotlib.pyplot as plt
+import random
 import numpy as np
 import sys
 import pandas as pd
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE,SIG_DFL)
-np.random.seed(1234)
 
 data=[]
 ## read csv file
@@ -75,6 +75,7 @@ if int(sys.argv[3])==1:
     plt.show()
 
 for i, (train_index, test_index) in enumerate(kf.split(DATA)):
+        np.random.seed(1234)
         print(f":Fold {i}:")
         #print(f"  Train: index={train_index}")
         #print(f"  Test:  index={test_index}")
@@ -93,7 +94,9 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the feature selection
         #rfe = RFE(estimator=LogisticRegression(solver='liblinear'), n_features_to_select=15)
         # define the model
-        model = MLPClassifier(solver='adam', alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='adaptive',random_state=1234,max_iter=500)
+        model = MLPClassifier(solver='adam',alpha=1e-5,hidden_layer_sizes=(100,10),learning_rate='invscaling',random_state=1234,power_t=0.1,max_iter=350,tol=1e-7,n_iter_no_change=50)
+        model.t=20 ## define iterations for invscaling
+        model.out_activation_='softmax' ## define the output
         steps = list()
         steps.append(('fu', fu))
         #steps.append(('rfe', rfe))

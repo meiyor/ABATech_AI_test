@@ -64,6 +64,7 @@ if int(sys.argv[3])==1:
     plt.show()
 
 for i, (train_index, test_index) in enumerate(kf.split(DATA)):
+        np.random.seed(1234)
         print(f":Fold {i}:")
         #print(f"  Train: index={train_index}")
         #print(f"  Test:  index={test_index}")
@@ -75,7 +76,9 @@ for i, (train_index, test_index) in enumerate(kf.split(DATA)):
         # define the model
         DATA_train=DATA[train_index,:]
         DATA_test=DATA[test_index,:]
-        model = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(10,5), learning_rate='adaptive', random_state=1234)
+        model = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(10,5),learning_rate='invscaling', random_state=1234)
+        model.t=20 ## iterations for invscaling
+        model.out_activation_='softmax' ## define the output as softmax
         # fit the model on the training set
         model.fit(DATA_train, labels[train_index].astype('int'))
         # make predictions on the test set
