@@ -11,6 +11,13 @@ import stemgraphic
 
 import numpy as np
 
+font = {'family' : 'normal',
+    'weight' : 'bold',
+    'size'   : 16}
+
+plt.rc('font', **font)
+
+
 colors = ['red', 'blue', 'green', 'cyan', 'magenta', 'yellow', 'black', 'lightcoral', 'seagreen', 'rebeccapurple', 'salmon', 'orange', 'silver', 'siena']
 ## function to define colors
 def setBoxColors(bp):
