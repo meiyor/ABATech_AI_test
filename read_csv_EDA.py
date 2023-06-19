@@ -179,7 +179,7 @@ for count in range(0,shape[0]):
        index_val = int(possibilities.index(data[count,in_count]))
        data_temp.append(index_val)
     data[count,:]=np.array(data_temp)
-  POS.append(possibilities)  
+  POS.append(possibilities)
   #else:
     ## replace nans for zeros in this approach
     #print(count,data,type(data),'data_n')
