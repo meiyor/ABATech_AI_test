@@ -96,6 +96,10 @@ The best accuracy we found when we extend the features to 124 and train the two-
 
 <img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/ROC_curve_best_model.png" width="900" height="450">
 
+To illustrate better the performance of the two-layer **Neural Network** feeding the classifier with extended 124 features, we measure a confusion matrix showing (a) the number of trials on each cell, and (b) the rate relative to the total trials located on each cell. We can see that the amount of trials classified correctly in significant in comparison with the error of this classifier, thus representing the best performance for **satisfied** and **dissatisfied**  trials decoding. The following plot/figure show the macro confusion matrix for the two modalities described above.
+
+<img src="https://github.com/meiyor/ABATech_AI_test/blob/main/images/confusion_matrices.jpg" width="1000" height="400">
+
 We added an extra option to emulate our based classifier and metrics using [**Tensorflow**](https://www.tensorflow.org/) with [**keras**](https://keras.io/). They are installed following the requirements.txt list. To evaluate the implementation of the **Neural Network** classifier we modeled in [scikit-learn](https://scikit-learn.org) in [**Tensorflow**](https://www.tensorflow.org/) with [**keras**](https://keras.io/) you can run the following command in Python. In this case, the plotting selector equal to 1, will make appear the learning curve showing the training and test lost for each fold.
 
 ```python
