@@ -24,7 +24,7 @@ import pandas as pd
 from signal import signal, SIGPIPE, SIG_DFL
 signal(SIGPIPE,SIG_DFL)
 
-font = {'family' : 'normal',
+font = {
     'weight' : 'bold',
     'size'   : 16}
 

@@ -11,7 +11,7 @@ import stemgraphic
 
 import numpy as np
 
-font = {'family' : 'normal',
+font = {
     'weight' : 'bold',
     'size'   : 16}
 
